@@ -163,7 +163,7 @@
             'void main(void) {',
                 'vec3 col = texture(samp, vPos).rgb;',
                 // トーンマッピング http://filmicworlds.com/blog/filmic-tonemapping-operators/
-                'float ExposureBias = 1.0f;',
+                'float ExposureBias = .0f;',
                 'col = Uncharted2Tonemap(ExposureBias * col) * Uncharted2WhiteScale();',
                 // ガンマ補正
                 'float g = 1.0/2.2;',
