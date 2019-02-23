@@ -114,7 +114,7 @@
 
             'void main(void) {',
                 'vec3 eye_dir = (vPos.xyz/vPos.w - camera_pos) * vec3(-1,1,1);',// (-1,1,1)はテクスチャの反転
-                'outColor  = vec4(texture(cubeTexture, eye_dir).rgb * 5.0, 1.0);',
+                'outColor  = vec4(texture(cubeTexture, eye_dir).rgb, 1.0);',
             '}'
         ].join('\n');
 
@@ -141,24 +141,24 @@
 
             'out vec4 outColor;',
 
-			'float A = 0.15;',
-			'float B = 0.50;',
-			'float C = 0.10;',
-			'float D = 0.20;',
-			'float E = 0.02;',
-			'float F = 0.30;',
-			'vec3 Uncharted2Tonemap(vec3 x)',
-			'{',
-			'   return ((x*(A*x+C*B)+D*E)/(x*(A*x+B)+D*F))-E/F;',
-			'}',
-			'float Uncharted2Tonemap(float x)',
-			'{',
-			'   return ((x*(A*x+C*B)+D*E)/(x*(A*x+B)+D*F))-E/F;',
-			'}',
-			'float Uncharted2WhiteScale(){',
-			'   float W = 11.2;',
-			'   return 1.0 / Uncharted2Tonemap(W);',
-			'}',
+            'float A = 0.15;',
+            'float B = 0.50;',
+            'float C = 0.10;',
+            'float D = 0.20;',
+            'float E = 0.02;',
+            'float F = 0.30;',
+            'vec3 Uncharted2Tonemap(vec3 x)',
+            '{',
+            '   return ((x*(A*x+C*B)+D*E)/(x*(A*x+B)+D*F))-E/F;',
+            '}',
+            'float Uncharted2Tonemap(float x)',
+            '{',
+            '   return ((x*(A*x+C*B)+D*E)/(x*(A*x+B)+D*F))-E/F;',
+            '}',
+            'float Uncharted2WhiteScale(){',
+            '   float W = 11.2;',
+            '   return 1.0 / Uncharted2Tonemap(W);',
+            '}',
 
             'void main(void) {',
                 'vec3 col = texture(samp, vPos).rgb;',
