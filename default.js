@@ -342,7 +342,7 @@
             // カメラを回すパラメータ
             angle += 0.0001 * elapsedTime;
             if(1.0 < angle) angle -= 1.0;
-angle = .5;
+//angle = .5;
             // ワールド行列の生成
             wMatrixFloor = mat.identity(mat.create());
             wMatrixBox1   = mat.identity(mat.create());
