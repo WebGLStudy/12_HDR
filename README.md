@@ -19,5 +19,11 @@ https://webglstudy.github.io/12_HDR/
 - GitHub Pages で正答したか確認しましょう
 
 # 謝辞
-今回のサンプルでは、Blochi氏の, Ueno Shrineの画像を使わせていただいています。
-http://www.hdrlabs.com/sibl/archive.html
+今回のリポジトリでは次のアセットを使わせていただいています。
+
+- Christian Bloch 氏の Ueno Shrineの画像
+  - http://www.hdrlabs.com/sibl/archive.html
+- Enki Mute 氏の hdrpng.js
+  - https://enkimute.github.io/hdrpng.js/
+- wgld.org の minMatrix.js
+  - https://wgld.org/d/library/l001.html
