@@ -165,7 +165,7 @@
                 // トーンマッピング http://filmicworlds.com/blog/filmic-tonemapping-operators/
                 'float ExposureBias = .0f;',
                 'col = Uncharted2Tonemap(ExposureBias * col) * Uncharted2WhiteScale();',
-                // ガンマ補正
+                // 逆ガンマ補正
                 'float g = 1.0/2.2;',
                 'col  = pow(col, vec3(g,g,g));',
                 'outColor  = vec4(col, 1.0);',
